@@ -1,0 +1,20 @@
+type Query {
+  getAllReview: [Review!]!
+}
+
+type Mutation {
+  changeSortReview(id: String!, sort: Int!): Boolean!
+  createReview(
+    title: String!
+    content: String!
+    thumbnailPath: String!
+    sort: Int!
+  ): Boolean!
+  modifyReview(
+    id: String!
+    title: String!
+    content: String!
+    thumbnailPath: String!
+  ): Boolean!
+  deleteReview(id: String!): Boolean!
+}

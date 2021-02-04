@@ -1,0 +1,16 @@
+type Query {
+  getDirectRequest(isComplete: Boolean!): [DirectRequest!]!
+}
+
+type Mutation {
+  createDirectRequest(
+    name: String!
+    mobile: String!
+    email: String!
+    content: String!
+    filePath: String!
+    fileOriginName: String!
+  ): Boolean!
+  modifyDirectRequestComplete(id: String!, memo: String!): Boolean!
+  directRequestByScreen(name: String!, mobile: String!): Boolean!
+}
